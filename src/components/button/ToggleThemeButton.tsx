@@ -41,10 +41,10 @@ export const ToggleThemeButton: FC = () => {
     'before:transition-all before:duration-200 before:ease-in-out',
     'before:z-10',
   )}>
-    <button onClick={() => setTheme('dark')} aria-label="Dark theme" className="p-1.5 flex items-center justify-center z-20">
+    <button onClick={() => setTheme('dark')} aria-label="Dark theme" className="p-1.5 rounded-full flex items-center justify-center outline-neutral-500 focus:outline-1 z-20">
       <BsFillMoonStarsFill/>
     </button>
-    <button onClick={() => setTheme('light')} aria-label="Light theme" className="p-1.5 flex items-center justify-center z-20">
+    <button onClick={() => setTheme('light')} aria-label="Light theme" className="p-1.5 rounded-full flex items-center justify-center outline-neutral-500 focus:outline-1 z-20">
       <BsFillSunFill/>
     </button>
   </div>

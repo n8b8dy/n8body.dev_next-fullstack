@@ -43,6 +43,7 @@ export default async function Home() {
               'opacity-75 hover:opacity-80',
               'dark:opacity-50 dark:hover:opacity-75',
               'hover:animate-pulse',
+              'focus:animate-pulse',
             )}>{icon}</a>
           ))}
         </div>

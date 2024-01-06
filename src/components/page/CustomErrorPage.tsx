@@ -6,6 +6,7 @@ import clsx from 'clsx'
 import { Heading1 } from '@/components/text/Heading1'
 import { Heading3 } from '@/components/text/Heading3'
 import { StandardButton } from '@/components/button/StandardButton'
+import Image from 'next/image'
 
 export type CustomErrorPageProps = {
   error: {
@@ -28,8 +29,7 @@ export const CustomErrorPage: FC<CustomErrorPageProps> = ({ error, reset }) => {
     {
       // Inspired by my own code from manga.ovh xd
       status === 500 ? <div className="relative mt-40">
-        {/* eslint-disable @next/next/no-img-element */}
-        <img src="/error-load.png" alt="500 Error Background" className={clsx(
+        <Image src="/error-load.png" alt="500 Error Background" width={370} height={320} className={clsx(
           'absolute',
           '-bottom-2 left-1/2',
           '-translate-x-1/2',
@@ -37,7 +37,7 @@ export const CustomErrorPage: FC<CustomErrorPageProps> = ({ error, reset }) => {
           'w-auto max-w-[calc(100vw-2rem)] max-h-80',
           '-z-10',
         )}/>
-        <Heading1 className="!text-8xl drop-shadow-text-border-1">{status}</Heading1>
+        <Heading1 className="!text-8xl drop-shadow-text-border-1 text-white">{status}</Heading1>
       </div> : <Heading1 className="!text-5xl">{name} {status}</Heading1>
     }
     {reason && <Heading3 className="text-center">{reason}</Heading3>}

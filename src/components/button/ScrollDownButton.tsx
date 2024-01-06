@@ -23,7 +23,7 @@ export const ScrollDownButton: FC<{ href: string }> = ({ href }) => {
     })
   }
 
-  return <Link href={href} onClick={clickHandler} aria-label="Scroll down">
+  return <Link href={href} onClick={clickHandler} aria-label="Scroll down" className="rounded outline-neutral-500 focus:outline py-2">
     <span className={clsx(
       'flex justify-center items-center',
       'relative',

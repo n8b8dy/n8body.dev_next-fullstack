@@ -13,6 +13,7 @@ export const StandardButtonClassname = clsx(
   'bg-neutral-100 dark:bg-neutral-900',
   'outline-neutral-500',
   'focus:outline-1',
+  'active:bg-neutral-200 dark:active:bg-neutral-800',
   'disabled:outline-1',
   'transition-all',
   'duration-300',
