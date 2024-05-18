@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html :focus-visible {
+    outline: 2px #7e22ce88 solid;
+  }
+  html.dark :focus-visible {
+    outline: 2px #3b0764ee solid;
+  }
+}
+
 @layer components {
   html .bg-pattern-circuit {
     background-color: #fafafa;
