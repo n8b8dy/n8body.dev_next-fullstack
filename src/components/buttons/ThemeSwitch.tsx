@@ -1,8 +1,8 @@
 'use client'
 
-import { FC, useState } from 'react'
-import { useEffect } from 'react'
+import type { FC } from 'react'
 
+import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { BsMoonStars } from 'react-icons/bs'
 import { IoPartlySunnyOutline } from 'react-icons/io5'
@@ -21,9 +21,9 @@ export const ThemeSwitch: FC = () => {
 
   return (
     <button onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')} className={cn(
-      'p-2 rounded text-2xl transition',
+      'p-2 rounded text-xl transition',
       'hover:bg-neutral-200 hover:dark:bg-neutral-900',
-      'active:bg-neutral-200 active:dark:bg-neutral-900 ',
+      'active:bg-neutral-200 active:dark:bg-neutral-900',
     )}>
       {resolvedTheme === 'dark' ? <BsMoonStars/> : <IoPartlySunnyOutline/>}
     </button>
