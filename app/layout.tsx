@@ -3,7 +3,9 @@ import type { PropsWithChildren } from 'react'
 
 import { Rubik } from 'next/font/google'
 
+import { Navbar } from '@/components/layout/Navbar'
 import { cn } from '@/utils/styles'
+
 import { Providers } from './providers'
 
 import './globals.css'
@@ -19,7 +21,12 @@ export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
   return (
     <html lang="en" suppressHydrationWarning>
     <body className={cn(rubik.className, 'bg-neutral-50 dark:bg-neutral-950')}>
-    <Providers>{children}</Providers>
+    <Providers>
+      <Navbar/>
+      <main className={cn('flex flex-col items-center')}>
+        {children}
+      </main>
+    </Providers>
     </body>
     </html>
   )
