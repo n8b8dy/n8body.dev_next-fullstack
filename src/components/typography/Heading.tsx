@@ -3,9 +3,9 @@ import { createElement } from 'react'
 import { cn } from '@/utils/styles'
 
 const HeadingClassnames = {
-  'h1': 'text-8xl font-medium',
-  'h3': 'text-4xl font-medium',
-  'h4': 'text-3xl leading-tight',
+  'h1': 'text-7xl md:text-8xl font-medium',
+  'h3': 'text-3xl md:text-4xl font-medium',
+  'h4': 'text-xl sm:text-2xl md:text-3xl leading-tight',
 } as const
 
 type TagVariants = keyof typeof HeadingClassnames
