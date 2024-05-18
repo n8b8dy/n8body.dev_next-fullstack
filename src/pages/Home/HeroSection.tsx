@@ -1,9 +1,8 @@
 import type { FC } from 'react'
 import { Heading } from '@/components/typography/Heading'
-import { cn } from '@/utils/styles'
-import { TypeAnimation } from 'react-type-animation'
 import { Section } from '@/components/layout/Section'
 import { TechnologyHeading } from '@/pages/Home/TechnologyHeading'
+import { cn } from '@/utils/styles'
 
 export const HeroSection: FC = () => {
   return (

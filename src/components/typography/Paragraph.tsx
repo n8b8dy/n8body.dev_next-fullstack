@@ -1,7 +1,7 @@
 import type { ComponentProps, FC } from 'react'
 import { cn } from '@/utils/styles'
 
-export type ParagraphProps = ComponentProps<'p'>
+export interface ParagraphProps extends ComponentProps<'p'> {}
 
 export const Paragraph: FC<ParagraphProps> = ({ children, className, ...props }) => {
   return (

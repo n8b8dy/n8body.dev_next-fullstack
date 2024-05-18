@@ -3,6 +3,7 @@
 import type { FC } from 'react'
 import { TypeAnimation } from 'react-type-animation'
 import { Heading } from '@/components/typography/Heading'
+import { cn } from '@/utils/styles'
 
 export const TechnologyHeading: FC = () => {
   return (
@@ -13,8 +14,7 @@ export const TechnologyHeading: FC = () => {
       'React', 2000,
       'Next.js', 2000,
       'Golang', 2000,
-      'Whatever is interesting', 2000,
-    ]} cursor wrapper="span" className="text-[1.1em] font-semibold"/>
+    ]} cursor wrapper="span" className={cn('inline-block text-[1.1em] font-semibold text-transparent bg-clip-text animate-text-shine bg-[500%_auto] bg-gradient-to-r from-fuchsia-600 via-violet-600 to-purple-600')}/>
     </Heading>
   )
 }

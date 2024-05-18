@@ -2,7 +2,6 @@ import { Section } from '@/components/layout/Section'
 import { HeroSection } from '@/pages/Home/HeroSection'
 import { cn } from '@/utils/styles'
 
-
 export default function Home() {
   return (
     <main className={cn('flex flex-col items-center')}>
