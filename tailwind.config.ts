@@ -8,13 +8,13 @@ const config: Config = {
   theme: {
     extend: {
       keyframes: {
-        'text-shine': {
+        'background-shine': {
           '0%, 100%': { backgroundPosition: '0% 50%' },
           '50%': { backgroundPosition: '100% 50%' },
         },
       },
       animation: {
-        'text-shine': 'text-shine 8s ease-in-out infinite',
+        'background-shine': 'background-shine 8s ease-in-out infinite',
       },
     },
   },

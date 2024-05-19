@@ -17,13 +17,11 @@ export const ThemeSwitch: FC = () => {
     setMounted(true)
   }, [])
 
-  if (!mounted) return <div className={cn('w-[40px] h-[40px] rounded animate-pulse bg-neutral-200 dark:bg-neutral-900')}></div>
+  if (!mounted) return <div className={cn('w-9 h-9 rounded', 'bg-placeholder')}></div>
 
   return (
     <button onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')} className={cn(
-      'p-2 rounded text-xl transition',
-      'hover:bg-neutral-200 hover:dark:bg-neutral-900',
-      'active:bg-neutral-200 active:dark:bg-neutral-900',
+      'p-2 rounded text-xl transition bg-action-button',
     )}>
       {resolvedTheme === 'dark' ? <BsMoonStars/> : <IoPartlySunnyOutline/>}
     </button>

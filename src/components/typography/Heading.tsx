@@ -22,8 +22,8 @@ export const Heading: FC<HeadingProps> = ({ children, tag, terminal = false, cla
         className: cn(
           HeadingClassnames[tag],
           terminal && [
-            'before:content-["$_"] before:text-transparent before:bg-clip-text before:animate-text-shine before:bg-[500%_auto]',
-            'before:bg-gradient-to-r before:from-fuchsia-600 before:via-violet-600 before:to-purple-600',
+            'before:content-["$_"] before:text-transparent before:bg-clip-text',
+            'before:animate-background-shine before:bg-gradient-FVW',
           ],
           className,
         ),

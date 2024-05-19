@@ -16,8 +16,8 @@ export const TechnologyHeading: FC = () => {
         'Next.js', 2000,
         'Golang', 2000,
       ]} cursor wrapper="span" className={cn(
-        'inline-block text-[1.1em] font-semibold text-transparent bg-clip-text animate-text-shine bg-[500%_auto]',
-        'bg-gradient-to-r from-fuchsia-600 via-violet-600 to-purple-600',
+        'inline-block text-[1.1em] font-semibold text-transparent bg-clip-text',
+        'animate-background-shine bg-gradient-FVW'
       )}/>
     </Heading>
   )

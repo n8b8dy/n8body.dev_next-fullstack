@@ -15,13 +15,15 @@ export const NavbarButton: FC<NavbarButtonProps> = ({ href, text }) => {
 
   return (
     <Link href={href} className={cn(
-      'px-3 py-2 flex items-center gap-1 rounded transition',
-      'hover:bg-neutral-200 hover:dark:bg-neutral-900',
-      'active:bg-neutral-200 active:dark:bg-neutral-900',
+      'px-3 py-2 flex items-center gap-1 rounded transition bg-action-button',
     )}>
-      <span className={cn(pathname.toLowerCase() === href && 'text-transparent bg-clip-text animate-text-shine bg-[500%_auto] bg-gradient-to-r from-fuchsia-600 via-violet-600 to-purple-600')}>
-        {text}
-      </span>
+      <span
+        className={cn(
+          String(pathname).toLowerCase() === href && [
+            'text-transparent bg-clip-text',
+            'animate-background-shine bg-gradient-FVW',
+          ],
+        )}>{text}</span>
     </Link>
   )
 }
