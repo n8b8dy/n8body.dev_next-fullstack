@@ -5,7 +5,7 @@ export interface SectionProps extends ComponentProps<'section'> {}
 
 export const Section: FC<SectionProps> = ({ children, className, ...props }) => {
   return (
-    <section className={cn('min-w-[395px] max-w-screen-2xl px-2 py-4 flex flex-col', className)} {...props}>
+    <section className={cn('min-w-[200px] w-full max-w-screen-2xl px-4 py-4 flex flex-col', className)} {...props}>
       {children}
     </section>
   )
