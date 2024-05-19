@@ -9,7 +9,7 @@ import { cn } from '@/utils/styles'
 export const HeroSection: FC = () => {
   return (
     <Section>
-      <Heading tag="h1" className={cn('w-auto sm:w-min lg:w-auto')}>
+      <Heading tag="h1" className={cn('w-auto sm:max-lg:w-min')}>
         Ruslan
         <span className={cn('hidden sm:inline')}> Shamsutdinov</span>
         <span className={cn('inline sm:hidden')}> Sh.</span>
