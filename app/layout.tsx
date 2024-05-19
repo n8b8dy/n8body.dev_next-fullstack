@@ -20,10 +20,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
   return (
     <html lang="en" suppressHydrationWarning>
-    <body className={cn(rubik.className, 'bg-neutral-50 dark:bg-neutral-950')}>
+    <body className={cn(rubik.className, 'min-h-screen flex flex-col bg-neutral-50 dark:bg-neutral-950')}>
     <Providers>
       <Navbar/>
-      <main className={cn('flex flex-col items-center')}>
+      <main className={cn('flex flex-col grow items-center')}>
         {children}
       </main>
     </Providers>
