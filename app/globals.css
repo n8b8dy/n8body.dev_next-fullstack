@@ -4,10 +4,8 @@
 
 @layer base {
   html :focus-visible {
-    outline: 2px #7e22ce88 solid;
-  }
-  html.dark :focus-visible {
-    outline: 2px #3b0764ee solid;
+    outline: none;
+    @apply ring-2 ring-violet-700;
   }
 }
 
