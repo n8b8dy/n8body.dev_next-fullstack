@@ -13,13 +13,22 @@ type TagVariants = keyof typeof HeadingClassnames
 
 export interface HeadingProps extends ComponentProps<TagVariants> {
   tag: TagVariants
+  terminal?: boolean
 }
 
-export const Heading: FC<HeadingProps> = ({ children, tag, className, ...props }): ReactNode => {
+export const Heading: FC<HeadingProps> = ({ children, tag, terminal = false, className, ...props }): ReactNode => {
   return (
     createElement(tag, {
-      className: cn(HeadingClassnames[tag], className),
-      ...props,
-    }, children)
+        className: cn(
+          HeadingClassnames[tag],
+          terminal && [
+            'before:content-["$_"] before:text-transparent before:bg-clip-text before:animate-text-shine before:bg-[500%_auto]',
+            'before:bg-gradient-to-r before:from-fuchsia-600 before:via-violet-600 before:to-purple-600',
+          ],
+          className,
+        ),
+        ...props,
+      },
+      children)
   )
 }
