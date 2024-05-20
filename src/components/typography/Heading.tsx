@@ -5,7 +5,7 @@ import { cn } from '@/utils/styles'
 const HeadingClassnames = {
   'h1': 'text-6xl sm:text-7xl font-medium',
   'h2': 'text-3xl sm:text-4xl md:text-5xl',
-  'h3': 'text-2xl sm:text-3xl md:text-4xl font-medium',
+  'h3': 'text-2xl md:text-3xl font-medium',
   'h4': 'text-xl sm:text-3xl',
 } as const
 

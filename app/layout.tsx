@@ -3,7 +3,7 @@ import type { PropsWithChildren } from 'react'
 
 import { Rubik } from 'next/font/google'
 
-import { Navbar } from '@/components/layout/Navbar'
+import { Header } from '@/components/layout/Header'
 import { cn } from '@/utils/styles'
 
 import { Providers } from './providers'
@@ -22,7 +22,7 @@ export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
     <html lang="en" suppressHydrationWarning>
     <body className={cn(rubik.className, 'min-h-screen flex flex-col bg-neutral-50 dark:bg-neutral-950')}>
     <Providers>
-      <Navbar/>
+      <Header/>
       <main className={cn('flex flex-col grow items-center')}>
         {children}
       </main>

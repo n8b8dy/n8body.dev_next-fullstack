@@ -7,6 +7,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      transitionProperty: {
+        'position': 'top, right, bottom, left',
+      },
       keyframes: {
         'background-shine': {
           '0%, 100%': { backgroundPosition: '0% 50%' },
