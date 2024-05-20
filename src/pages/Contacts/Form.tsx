@@ -1,6 +1,6 @@
 'use client'
 
-import { FC } from 'react'
+import type { FC } from 'react'
 import type { SubmitHandler } from 'react-hook-form'
 
 import { useForm } from 'react-hook-form'
@@ -15,11 +15,8 @@ import { emailRegex } from '@/utils/regex'
 
 
 export type Inputs = {
-  test: string
-
   name: string
   email: string
-  company: string
   message: string
 }
 
