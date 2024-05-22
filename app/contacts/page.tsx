@@ -23,7 +23,7 @@ const Links = [
 
 export default function Contacts() {
   return (
-    <Section className={cn('max-w-screen-2xl my-auto lg:flex-row lg:gap-[4%]')}>
+    <Section className={cn('max-w-screen-2xl my-auto py-8 lg:flex-row lg:gap-[2%]')}>
       <div className={cn('px-2 py-4 items-center lg:flex-[0_0_48%]')}>
         <div className={cn('max-w-lg mx-auto')}>
           <h2 className={cn(
