@@ -22,3 +22,20 @@ model Message {
   email String
   message String
 }
+
+model Project {
+  id String @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  title String
+  descriptiom String?
+  link String?
+  github String?
+
+  // There must be corresponding icons
+  technologies String[]
+
+  // Markdown sections
+  sections String[]
+}
