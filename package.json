@@ -1,6 +1,7 @@
 {
   "name": "n8body.dev_next-fullstack",
   "version": "0.1.0",
+  "description": "",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,6 +9,10 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "packageManager": "pnpm@9.1.1",
+  "keywords": [],
+  "author": "n8body",
+  "license": "MIT",
   "dependencies": {
     "@hookform/error-message": "^2.0.1",
     "@prisma/client": "5.14.0",
