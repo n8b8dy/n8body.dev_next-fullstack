@@ -11,8 +11,8 @@ import { cn } from '@/utils/styles'
 
 export const NavbarButtons: Array<NavbarButtonProps> = [
   { href: '/', text: 'Home' },
-  { href: '/books', text: 'Books' },
   { href: '/projects', text: 'Projects' },
+  { href: '/books', text: 'Books' },
   { href: '/contacts', text: 'Contacts' },
 ] as const
 
