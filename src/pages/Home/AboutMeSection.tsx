@@ -17,7 +17,7 @@ export const AboutMeSection: FC = () => {
         About me
       </Heading>
       <Paragraph>
-        Hello, <UserIpText/>! Welcome to my personal website —
+        Hello, <UserIpText endpoint={process.env.NEXT_PUBLIC_IP_ENDPOINT!}/>! Welcome to my personal website —
         I am an ambitious developer from Bulgaria specialising in front-end development using Typescript and React.
         Currently, <Bold>I am actively looking for a job</Bold>, so... <Link href="/contacts" className={cn('rounded underline')}>contact me</Link>!<br/>
       </Paragraph>
