@@ -1,8 +1,11 @@
+import Link from 'next/link'
 import { Fragment } from 'react'
 
 import { Section } from '@/components/layout/Section'
 import { Heading } from '@/components/typography/Heading'
 import { HeroSection } from '@/pages/Home/HeroSection'
+import { Paragraph } from '@/components/typography/Paragraph'
+import { Bold } from '@/components/typography/Bold'
 
 import { cn } from '@/utils/styles'
 
@@ -20,14 +23,19 @@ export default function Home() {
 
       <Section>
         <Heading tag="h3" terminal>
-          Welcome
-        </Heading>
-      </Section>
-
-      <Section>
-        <Heading tag="h3" terminal>
           About me
         </Heading>
+        <Paragraph>
+          Hello, <Bold className={'bg-clip-text text-transparent bg-gradient-FVW '}>username</Bold>! Welcome to my personal website —
+          I am an ambitious developer from Bulgaria specialising in front-end development using Typescript and React.
+          Currently, <Bold>I am actively looking for a job</Bold>, so... <Link href="/contacts" className={cn('rounded underline')}>contact me</Link>!<br/>
+        </Paragraph>
+        <Paragraph>
+          Most of my free time is spent developing my pet projects or studying new technologies. Additionally, my interests include system administration, history, philosophy, and playing the guitar.
+        </Paragraph>
+        <Paragraph>
+          <i>Oh, and I use Arch btw.</i>
+        </Paragraph>
       </Section>
 
       <Section>

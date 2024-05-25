@@ -9,7 +9,7 @@ export const Footer: FC = () => {
         <Link href="/" className={cn('p-1 text-xl leading-tight font-semibold rounded')}>n8body.dev</Link>
         <span className={cn('p-1 text-sm')}>
           Created by Ruslan Shamsutdinov, aka n8body, with love and bugs. <br/>
-          The source code can be found <Link href="https://github.com/n8b8dy/n8body.dev_next-fullstack" className={cn('underline')}>here</Link>.
+          The source code can be found <Link href="https://github.com/n8b8dy/n8body.dev_next-fullstack" className={cn('rounded underline')}>here</Link>.
         </span>
       </footer>
     </div>
