@@ -1,12 +1,9 @@
-import Link from 'next/link'
 import { Fragment } from 'react'
 
 import { Section } from '@/components/layout/Section'
 import { Heading } from '@/components/typography/Heading'
 import { HeroSection } from '@/pages/Home/HeroSection'
-import { Paragraph } from '@/components/typography/Paragraph'
-import { Bold } from '@/components/typography/Bold'
-import { UserIpText } from '@/pages/Home/UserIpText'
+import { AboutMeSection } from '@/pages/Home/AboutMeSection'
 
 import { cn } from '@/utils/styles'
 
@@ -22,27 +19,13 @@ export default function Home() {
         <HeroSection/>
       </div>
 
-      <Section>
-        <Heading tag="h3" terminal>
-          About me
-        </Heading>
-        <Paragraph>
-          Hello, <UserIpText/>! Welcome to my personal website —
-          I am an ambitious developer from Bulgaria specialising in front-end development using Typescript and React.
-          Currently, <Bold>I am actively looking for a job</Bold>, so... <Link href="/contacts" className={cn('rounded underline')}>contact me</Link>!<br/>
-        </Paragraph>
-        <Paragraph>
-          Most of my free time is spent developing my pet projects or studying new technologies. Additionally, my interests include system administration, history, philosophy, and playing the guitar.
-        </Paragraph>
-        <Paragraph>
-          <i>Oh, and I use Arch btw.</i>
-        </Paragraph>
-      </Section>
+      <AboutMeSection/>
 
       <Section>
         <Heading tag="h3" terminal>
           Tech Stack
         </Heading>
+
       </Section>
 
       <Section>
