@@ -6,6 +6,7 @@ import { Heading } from '@/components/typography/Heading'
 import { HeroSection } from '@/pages/Home/HeroSection'
 import { Paragraph } from '@/components/typography/Paragraph'
 import { Bold } from '@/components/typography/Bold'
+import { UserIpText } from '@/pages/Home/UserIpText'
 
 import { cn } from '@/utils/styles'
 
@@ -26,7 +27,7 @@ export default function Home() {
           About me
         </Heading>
         <Paragraph>
-          Hello, <Bold className={'bg-clip-text text-transparent bg-gradient-FVW '}>username</Bold>! Welcome to my personal website —
+          Hello, <UserIpText/>! Welcome to my personal website —
           I am an ambitious developer from Bulgaria specialising in front-end development using Typescript and React.
           Currently, <Bold>I am actively looking for a job</Bold>, so... <Link href="/contacts" className={cn('rounded underline')}>contact me</Link>!<br/>
         </Paragraph>
