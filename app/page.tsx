@@ -4,6 +4,7 @@ import { Section } from '@/components/layout/Section'
 import { Heading } from '@/components/typography/Heading'
 import { HeroSection } from '@/pages/Home/HeroSection'
 import { AboutMeSection } from '@/pages/Home/AboutMeSection'
+import { TechStackSection } from '@/pages/Home/TechStackSection'
 
 import { cn } from '@/utils/styles'
 
@@ -20,13 +21,7 @@ export default function Home() {
       </div>
 
       <AboutMeSection/>
-
-      <Section>
-        <Heading tag="h3" terminal>
-          Tech Stack
-        </Heading>
-
-      </Section>
+      <TechStackSection/>
 
       <Section>
         <Heading tag="h3" terminal>
