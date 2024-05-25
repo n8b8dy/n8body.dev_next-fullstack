@@ -22,7 +22,8 @@ export const AboutMeSection: FC = () => {
         Currently, <Bold>I am actively looking for a job</Bold>, so... <Link href="/contacts" className={cn('rounded underline')}>contact me</Link>!<br/>
       </Paragraph>
       <Paragraph>
-        Most of my free time is spent developing my pet projects or studying new technologies. Additionally, my interests include system administration, history, philosophy, and playing the guitar.
+        Most of my free time is spent on developing pet projects or studying new technologies.
+        Additionally, my interests include system administration, history, philosophy and playing the guitar.
       </Paragraph>
       <Paragraph>
         <i>Oh, and I use Arch btw.</i>
