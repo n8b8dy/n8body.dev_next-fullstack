@@ -1,16 +1,19 @@
 import type { FC, ReactNode } from 'react'
 import { Section } from '@/components/layout/Section'
 import { Heading } from '@/components/typography/Heading'
-import { DockerSVG, GitSVG, GopherSVG, JavascriptSVG, ReactSVG, TypescriptSVG } from '@/components/lib/svg'
+import { DockerSVG, GitSVG, GopherSVG, JavascriptSVG, LinuxSVG, PostgresSVG, ReactSVG, TailwindSVG, TypescriptSVG } from '@/components/lib/svg'
 import { cn } from '@/utils/styles'
 
 const Technologies = [
   { title: 'JavaScript', icon: <JavascriptSVG/> },
   { title: 'TypeScript', icon: <TypescriptSVG/> },
   { title: 'React', icon: <ReactSVG/> },
+  { title: 'Tailwind', icon: <TailwindSVG/> },
   { title: 'Golang', icon: <GopherSVG/> },
+  { title: 'Postgres', icon: <PostgresSVG/> },
   { title: 'Git', icon: <GitSVG/> },
   { title: 'Docker', icon: <DockerSVG className={cn('transform scale-[1.5]')}/> },
+  { title: 'Linux', icon: <LinuxSVG className={cn('transform scale-[1.1]')}/> },
 ] as const
 
 interface TechnologyCardProps {
