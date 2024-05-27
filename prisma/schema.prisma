@@ -23,6 +23,14 @@ model Message {
   message String
 }
 
+enum ProjectTag {
+  FRONTEND
+  BACKEND
+  FULLSTACK
+  SCRAPER
+  BOT
+}
+
 model Project {
   id String @id @default(uuid())
   createdAt DateTime @default(now())
@@ -33,6 +41,7 @@ model Project {
   link String?
   github String?
 
+  tags ProjectTag[]
   // There must be corresponding icons
   technologies String[]
 
