@@ -23,7 +23,11 @@ interface TechnologyCardProps {
 
 const TechnologyCard: FC<TechnologyCardProps> = ({ icon, title }) => {
   return (
-    <div className={cn('w-28 h-24 px-2 pt-4 pb-3 flex flex-col items-center justify-center gap-1 bg-opacity-50 bg-neutral-900 rounded')}>
+    <div className={cn(
+      'w-24 h-20 md:w-28 md:h-24 px-1 pt-2 pb-1.5 md:px-2 md:pt-4 md:pb-3',
+      'flex flex-col items-center justify-center gap-1',
+      'text-sm md:text-lg bg-opacity-50 bg-neutral-900 rounded',
+    )}>
       {icon}
       <span>{title}</span>
     </div>
@@ -36,7 +40,7 @@ export const TechStackSection: FC = () => {
       <Heading tag="h3" terminal>
         Tech Stack
       </Heading>
-      <div className={cn('mt-2 mb-1 flex flex-wrap gap-4')}>
+      <div className={cn('mt-2 mb-1 flex justify-center sm:justify-start flex-wrap gap-4')}>
         {Technologies.map((technology) => <TechnologyCard key={`tech-${technology.title}`} {...technology}/>)}
       </div>
     </Section>
