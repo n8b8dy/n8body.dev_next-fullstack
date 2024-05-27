@@ -1,5 +1,7 @@
 import type { ComponentProps, FC, ReactNode } from 'react'
+import Link from 'next/link'
 import { createElement } from 'react'
+import { FaLink } from 'react-icons/fa'
 import { cn } from '@/utils/styles'
 
 const HeadingClassnames = {
@@ -14,21 +16,23 @@ type TagVariants = keyof typeof HeadingClassnames
 export interface HeadingProps extends ComponentProps<TagVariants> {
   tag: TagVariants
   terminal?: boolean
+  href?: string
 }
 
-export const Heading: FC<HeadingProps> = ({ children, tag, terminal = false, className, ...props }): ReactNode => {
-  return (
-    createElement(tag, {
-        className: cn(
-          HeadingClassnames[tag],
-          terminal && [
-            'before:content-["$_"] before:text-transparent before:bg-clip-text',
-            'before:animate-background-shine before:bg-gradient-FVW',
-          ],
-          className,
-        ),
-        ...props,
-      },
-      children)
+export const Heading: FC<HeadingProps> = ({ children, tag, terminal = false, className, href, ...props }): ReactNode => {
+  return createElement(tag, {
+      className: cn(
+        HeadingClassnames[tag],
+        terminal && [
+          'before:content-["$_"] before:text-transparent before:bg-clip-text',
+          'before:animate-background-shine before:bg-gradient-FVW',
+        ],
+        className,
+      ),
+      ...props,
+    },href === undefined ? children : <Link href={href} className={cn('inline-flex items-center gap-2 active:underline hover:underline rounded')}>
+      {children}
+      <FaLink className={cn('relative top=[1px] right-0.5 text-base opacity-50')}/>
+    </Link>,
   )
 }

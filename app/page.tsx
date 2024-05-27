@@ -24,7 +24,7 @@ export default function Home() {
       <TechStackSection/>
 
       <Section>
-        <Heading tag="h3" terminal>
+        <Heading tag="h3" href="/projects" terminal>
           Projects
         </Heading>
       </Section>
