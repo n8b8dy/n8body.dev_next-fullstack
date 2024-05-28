@@ -26,7 +26,7 @@ const TechnologyCard: FC<TechnologyCardProps> = ({ icon, title }) => {
     <div className={cn(
       'w-24 h-20 md:w-28 md:h-24 px-1 pt-2 pb-1.5 md:px-2 md:pt-4 md:pb-3',
       'flex flex-col items-center justify-center gap-1',
-      'text-sm md:text-lg bg-opacity-50 bg-neutral-900 rounded',
+      'text-sm md:text-lg bg-opacity-50 bg-neutral-200 dark:bg-neutral-900 rounded',
     )}>
       {icon}
       <span>{title}</span>
