@@ -23,6 +23,22 @@ model Message {
   message String
 }
 
+enum ProjectTechnology {
+  JAVASCRIPT
+  TYPESCRIPT
+
+  GOLANG
+  NODEJS
+
+  REACT
+  VUEJS
+
+  TAILWIND
+
+  POSTGRES
+  PRISMA
+}
+
 enum ProjectTag {
   FRONTEND
   BACKEND
@@ -43,7 +59,7 @@ model Project {
 
   tags ProjectTag[]
   // There must be corresponding icons
-  technologies String[]
+  technologies ProjectTechnology[]
 
   // Markdown sections
   sections String[]
