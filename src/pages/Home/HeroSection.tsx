@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 
-import { Heading } from '@/components/typography/Heading'
 import { Section } from '@/components/layout/Section'
+import { Heading } from '@/components/typography/Heading'
 import { TechnologyHeading } from '@/pages/Home/TechnologyHeading'
 
 import { cn } from '@/utils/styles'

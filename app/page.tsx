@@ -1,14 +1,28 @@
 import { Fragment } from 'react'
 
 import { Section } from '@/components/layout/Section'
-import { Heading } from '@/components/typography/Heading'
 import { HeroSection } from '@/pages/Home/HeroSection'
 import { AboutMeSection } from '@/pages/Home/AboutMeSection'
 import { TechStackSection } from '@/pages/Home/TechStackSection'
+import { ProjectsSection } from '@/pages/Home/ProjectsSection'
 
+import prisma from '@/lib/prisma'
 import { cn } from '@/utils/styles'
 
-export default function Home() {
+async function getData() {
+  const projects = await prisma.project.findMany({
+    take: 8,
+    orderBy: { createdAt: 'desc' },
+  })
+
+  return {
+    projects,
+  }
+}
+
+export default async function Home() {
+  const { projects } = await getData()
+
   return (
     <Fragment>
       <div className={cn(
@@ -22,12 +36,7 @@ export default function Home() {
 
       <AboutMeSection/>
       <TechStackSection/>
-
-      <Section>
-        <Heading tag="h3" href="/projects" terminal>
-          Projects
-        </Heading>
-      </Section>
+      <ProjectsSection projects={projects}/>
 
       <Section>
 
