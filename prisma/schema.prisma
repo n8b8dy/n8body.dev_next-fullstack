@@ -53,7 +53,7 @@ model Project {
   updatedAt DateTime @updatedAt
 
   title String
-  descriptiom String?
+  description String?
   link String?
   github String?
 
