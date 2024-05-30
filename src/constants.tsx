@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import type { ProjectTag, ProjectTechnology } from '@prisma/client'
+
 import { GopherSVG, JavascriptSVG, NodeSVG, PostgresSVG, PrismaSVG, ReactSVG, TailwindSVG, TypescriptSVG, VueSVG } from '@/components/lib/svg'
 
 export const ProjectTechnologies: Record<ProjectTechnology, {

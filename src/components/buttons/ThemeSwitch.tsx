@@ -17,7 +17,9 @@ export const ThemeSwitch: FC = () => {
     setMounted(true)
   }, [])
 
-  if (!mounted) return <div className={cn('w-9 h-9 rounded', 'bg-placeholder')}></div>
+  if (!mounted) return (
+    <div className={cn('w-9 h-9 rounded', 'bg-placeholder')}></div>
+  )
 
   return (
     <button onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')} className={cn(

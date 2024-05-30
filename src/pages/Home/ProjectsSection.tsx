@@ -11,10 +11,10 @@ export interface ProjectsSectionProps {
   projects: Array<Project>
 }
 
-const ProjectCard: FC<Project> = ({ id, title, description, tags, technologies }) => {
+const ProjectCard: FC<Project> = ({ id, slug, title, description, tags, technologies }) => {
   return (
     <div className={cn('px-4 py-3 flex flex-col gap-0.5 bg-opacity-50 bg-neutral-200 dark:bg-neutral-900 rounded')}>
-      <Heading tag="h5" href={`/projects/${id}`}>
+      <Heading tag="h5" href={`/projects/${slug}`}>
         {title}
       </Heading>
       <p className={cn('mb-1 flex-1')}>{description}</p>
