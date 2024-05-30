@@ -1,6 +1,8 @@
 import { Fragment } from 'react'
 
 import { Section } from '@/components/layout/Section'
+
+import { Heading } from '@/components/typography/Heading'
 import { HeroSection } from '@/pages/Home/HeroSection'
 import { AboutMeSection } from '@/pages/Home/AboutMeSection'
 import { TechStackSection } from '@/pages/Home/TechStackSection'
@@ -39,7 +41,13 @@ export default async function Home() {
       <ProjectsSection projects={projects}/>
 
       <Section>
-
+        <div className={cn('py-16 flex flex-col items-center gap-2')}>
+          <Heading tag="h5">Interested? Then...</Heading>
+          <a href="/files/Ruslan_Shamsutdinov_CV.pdf" className={cn(
+            'px-4 py-2 self-center text-white font-semibold rounded',
+            'animate-background-shine bg-gradient-FVW',
+          )} download>Download CV</a>
+        </div>
       </Section>
     </Fragment>
   )
