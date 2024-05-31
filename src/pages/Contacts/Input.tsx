@@ -31,7 +31,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(({
           {icon}
         </div>
         <input name={name} id={id} className={cn(
-          'w-full mt-1 p-2 pl-11 pr-2 border-[1px] border-neutral-300 dark:border-neutral-800 rounded bg-white dark:bg-neutral-900',
+          'w-full mt-1 p-2 pl-11 pr-2 border-[1px] border-neutral-300 dark:border-neutral-800 bg-white dark:bg-neutral-900 rounded',
           Boolean(errors[name]) && '[&:not(:focus)]:border-red-600',
           className,
         )} ref={ref} {...props}/>

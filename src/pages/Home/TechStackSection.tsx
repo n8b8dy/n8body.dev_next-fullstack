@@ -21,7 +21,7 @@ interface TechnologyCardProps {
   icon: ReactNode
 }
 
-const TechnologyCard: FC<TechnologyCardProps> = ({ icon, title }) => {
+const Card: FC<TechnologyCardProps> = ({ icon, title }) => {
   return (
     <div className={cn(
       'w-24 h-20 md:w-28 md:h-24 px-1 pt-2 pb-1.5 md:px-2 md:pt-4 md:pb-3',
@@ -41,7 +41,7 @@ export const TechStackSection: FC = () => {
         Tech Stack
       </Heading>
       <div className={cn('mt-2 mb-1 flex justify-center sm:justify-start flex-wrap gap-4')}>
-        {Technologies.map((technology) => <TechnologyCard key={`tech-${technology.title}`} {...technology}/>)}
+        {Technologies.map((technology) => <Card key={`tech-${technology.title}`} {...technology}/>)}
       </div>
     </Section>
   )
