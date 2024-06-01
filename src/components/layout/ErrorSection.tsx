@@ -9,11 +9,11 @@ export interface ErrorSectionProps {
   reset?: VoidFunction
 }
 
-export const ErrorSection: FC<ErrorSectionProps> = ({ status, description, reset }) => {
+export const ErrorSection: FC<ErrorSectionProps> = ({ status, description }) => {
   return (
     <Section className={cn('my-auto items-center gap-1')}>
-      <h2 className={cn('text-4xl text-transparent bg-clip-text', 'bg-gradient-FVW')}>{status}</h2>
-      <h3 className={cn('text-xl mt-0 mb-3')}>{description}</h3>
+      <h2 className={cn('text-7xl font-semibold text-transparent bg-clip-text', 'bg-gradient-FVW')}>{status}</h2>
+      <h3 className={cn('text-2xl font-medium mt-0 mb-3')}>{description}</h3>
       <Link href="/" className={cn('px-3 py-1 font-medium rounded transition', 'bg-gradient-FVW')}>Go to home</Link>
     </Section>
   )

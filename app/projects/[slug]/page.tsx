@@ -1,5 +1,3 @@
-import Markdown from 'react-markdown'
-
 import { Section } from '@/components/layout/Section'
 import { Heading } from '@/components/typography/Heading'
 import { BreadCrumbs } from '@/components/layout/BreadCrumbs'
@@ -35,7 +33,7 @@ export default async function ProjectsSlug({ params }: {
     <ErrorSection status={404} description="Project Not Found"/>
   )
 
-  const { id, title, description, tags, technologies, sections } = project
+  const { id, title, tags, technologies, sections } = project
 
   return (
     <Section>
