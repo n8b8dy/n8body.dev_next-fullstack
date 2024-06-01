@@ -35,7 +35,7 @@ export const Catalog: FC<CatalogProps> = ({ projects }) => {
       {/* TODO: Add filter sidebar */}
       {filteredProjects.length === 0
         ? <div className={cn('py-4 flex justify-center')}>
-          <span className={cn('text-lg italic opacity-50')}>Couldn't find any projects...</span>
+          <span className={cn('text-lg italic opacity-50')}>Couldn&apos;t find any projects...</span>
         </div>
         : <div className={cn('py-2 grid lg:grid-cols-2 gap-2 rounded')}>
           {filteredProjects.map(props => <ProjectCard key={props.id} {...props}/>)}
