@@ -1,0 +1,6 @@
+services:
+  website:
+    build: .
+    image: n8body.dev/next-fullstack
+    container_name: next-fullstack
+    network_mode: host
