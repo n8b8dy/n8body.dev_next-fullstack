@@ -1,6 +1,6 @@
 import { Section } from '@/components/layout/Section'
 import { Heading } from '@/components/typography/Heading'
-import { Catalog } from '@/pages/Projects/Catalog'
+import { Catalog } from '@/page-parts/Projects/Catalog'
 
 import prisma from '@/lib/prisma'
 import { cn } from '@/utils/styles'

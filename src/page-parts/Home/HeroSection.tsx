@@ -2,7 +2,7 @@ import type { FC } from 'react'
 
 import { Section } from '@/components/layout/Section'
 import { Heading } from '@/components/typography/Heading'
-import { TechnologyHeading } from '@/pages/Home/TechnologyHeading'
+import { TechnologyHeading } from '@/page-parts/Home/TechnologyHeading'
 
 import { cn } from '@/utils/styles'
 

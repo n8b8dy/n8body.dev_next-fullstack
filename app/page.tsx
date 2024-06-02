@@ -3,10 +3,10 @@ import { Fragment } from 'react'
 import { Section } from '@/components/layout/Section'
 
 import { Heading } from '@/components/typography/Heading'
-import { HeroSection } from '@/pages/Home/HeroSection'
-import { AboutMeSection } from '@/pages/Home/AboutMeSection'
-import { TechStackSection } from '@/pages/Home/TechStackSection'
-import { ProjectsSection } from '@/pages/Home/ProjectsSection'
+import { HeroSection } from '@/page-parts/Home/HeroSection'
+import { AboutMeSection } from '@/page-parts/Home/AboutMeSection'
+import { TechStackSection } from '@/page-parts/Home/TechStackSection'
+import { ProjectsSection } from '@/page-parts/Home/ProjectsSection'
 
 import prisma from '@/lib/prisma'
 import { cn } from '@/utils/styles'
@@ -44,7 +44,7 @@ export default async function Home() {
         <div className={cn('py-16 flex flex-col items-center gap-2')}>
           <Heading tag="h5">Interested? Then...</Heading>
           <a href="/files/Ruslan_Shamsutdinov_CV.pdf" className={cn(
-            'px-4 py-2 self-center text-white font-semibold rounded',
+            'px-4 py-1.5 self-center text-white font-semibold rounded',
             'animate-background-shine bg-gradient-FVW',
           )} download>Download CV</a>
         </div>

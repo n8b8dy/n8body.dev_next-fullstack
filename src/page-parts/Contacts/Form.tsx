@@ -1,6 +1,7 @@
 'use client'
 
 import type { FC } from 'react'
+import type { Message } from '@prisma/client'
 import type { SubmitHandler } from 'react-hook-form'
 
 import { useRef, useState } from 'react'
@@ -9,12 +10,10 @@ import { HiOutlineUser } from 'react-icons/hi'
 import { MdAlternateEmail } from 'react-icons/md'
 import { VscNewline } from 'react-icons/vsc'
 
-import { Input } from '@/pages/Contacts/Input'
-import { TextArea } from '@/pages/Contacts/TextArea'
+import { Input } from '@/page-parts/Contacts/Input'
+import { TextArea } from '@/page-parts/Contacts/TextArea'
 import { cn } from '@/utils/styles'
 import { emailRegex } from '@/utils/regex'
-
-import { createMessage } from '~/contacts/actions'
 
 export type Inputs = {
   name: string
@@ -22,7 +21,11 @@ export type Inputs = {
   message: string
 }
 
-export const Form: FC = () => {
+export interface FormProps {
+  createMessage: (data: Inputs) => Promise<Message>
+}
+
+export const Form: FC<FormProps> = ({ createMessage }) => {
   const {
     register,
     handleSubmit,

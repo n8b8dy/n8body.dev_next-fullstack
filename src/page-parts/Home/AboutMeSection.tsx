@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Section } from '@/components/layout/Section'
 import { Heading } from '@/components/typography/Heading'
 import { Paragraph } from '@/components/typography/Paragraph'
-import { UserIpText } from '@/pages/Home/UserIpText'
+import { UserIpText } from '@/page-parts/Home/UserIpText'
 import { Bold } from '@/components/typography/Bold'
 
 import { cn } from '@/utils/styles'
