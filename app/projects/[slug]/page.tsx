@@ -50,7 +50,7 @@ export default async function ProjectsSlug({ params }: {
         </div>)}
       </div>
 
-      <div className={cn('mb-2 flex flex-wrap gap-2')}>
+      <div className={cn('flex flex-wrap gap-2')}>
         {technologies.map(technology => <div key={`${id}-${technology}`} className={cn('px-2 py-1.5 flex gap-1.5 text-sm bg-neutral-200 dark:bg-neutral-800 rounded')}>
           <div className={cn('w-5')}>
             {ProjectTechnologies[technology].icon}
@@ -59,7 +59,7 @@ export default async function ProjectsSlug({ params }: {
         </div>)}
       </div>
 
-      <div className={cn('flex flex-col gap-1 text-lg')}>
+      <div className={cn('mt-4 flex flex-col gap-1 text-lg')}>
         {sections.map((section, index) => <MarkdownCompiler key={`${id}-section-${index}`} content={section}/>)}
       </div>
     </Section>
