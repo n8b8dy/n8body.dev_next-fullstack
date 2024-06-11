@@ -1,4 +1,4 @@
-import type { Dispatch, FC, SetStateAction } from 'react'
+import type { Dispatch, SetStateAction } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/utils/styles'
@@ -9,7 +9,7 @@ export interface MenuButtonProps {
   text: string
 }
 
-export const MenuButton: FC<MenuButtonProps> = ({ setOpen, href, text }) => {
+export const MenuButton = ({ setOpen, href, text }: MenuButtonProps) => {
   const pathname = usePathname()
 
   return (

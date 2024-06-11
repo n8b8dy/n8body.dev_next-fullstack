@@ -1,7 +1,6 @@
-import type { FC } from 'react'
+import Link from 'next/link'
 import { Section } from '@/components/layout/Section'
 import { cn } from '@/utils/styles'
-import Link from 'next/link'
 
 export interface ErrorSectionProps {
   status: number
@@ -9,7 +8,7 @@ export interface ErrorSectionProps {
   reset?: VoidFunction
 }
 
-export const ErrorSection: FC<ErrorSectionProps> = ({ status, description }) => {
+export const ErrorSection = ({ status, description }: ErrorSectionProps) => {
   return (
     <Section className={cn('my-auto items-center gap-1')}>
       <h2 className={cn('text-7xl font-semibold text-transparent bg-clip-text', 'bg-gradient-FVW')}>{status}</h2>

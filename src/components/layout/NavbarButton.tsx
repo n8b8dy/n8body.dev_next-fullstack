@@ -1,4 +1,3 @@
-import type { FC } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/utils/styles'
@@ -8,7 +7,7 @@ export interface NavbarButtonProps {
   text: string
 }
 
-export const NavbarButton: FC<NavbarButtonProps> = ({ href, text }) => {
+export const NavbarButton = ({ href, text }: NavbarButtonProps) => {
   const pathname = usePathname()
 
   return (

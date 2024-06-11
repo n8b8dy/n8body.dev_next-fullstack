@@ -1,8 +1,9 @@
-import type { FC } from 'react'
 import Link from 'next/link'
 import { cn } from '@/utils/styles'
 
-export const Footer: FC = () => {
+export interface FooterProps {}
+
+export const Footer = ({}: FooterProps) => {
   return (
     <div className={cn('w-full flex justify-center bg-neutral-50 dark:bg-neutral-950 bg-opacity-25 border-t-[1px] dark:border-neutral-800')}>
       <footer className={cn('w-full max-w-screen-2xl p-4 flex flex-col items-start opacity-50')}>

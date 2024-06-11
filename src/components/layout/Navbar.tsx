@@ -1,6 +1,5 @@
 'use client'
 
-import type { FC } from 'react'
 import type { NavbarButtonProps } from '@/components/layout/NavbarButton'
 
 import Link from 'next/link'
@@ -9,6 +8,8 @@ import { NavbarButton } from '@/components/layout/NavbarButton'
 import { Menu } from '@/components/layout/Menu'
 import { cn } from '@/utils/styles'
 
+export interface NavbarProps {}
+
 export const NavbarButtons: Array<NavbarButtonProps> = [
   { href: '/', text: 'Home' },
   { href: '/projects', text: 'Projects' },
@@ -16,7 +17,7 @@ export const NavbarButtons: Array<NavbarButtonProps> = [
   { href: '/contacts', text: 'Contacts' },
 ] as const
 
-export const Navbar: FC = () => {
+export const Navbar = ({}: NavbarProps) => {
   return (
     <div className={cn('flex items-center gap-2')}>
       <Menu/>

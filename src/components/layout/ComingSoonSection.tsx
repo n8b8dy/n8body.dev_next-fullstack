@@ -1,9 +1,10 @@
-import type { FC } from 'react'
 import Link from 'next/link'
 import { Section } from '@/components/layout/Section'
 import { cn } from '@/utils/styles'
 
-export const ComingSoonSection: FC = () => {
+export interface ComingSoonSectionProps {}
+
+export const ComingSoonSection = ({}: ComingSoonSectionProps) => {
   return (
     <Section className={cn('my-auto items-center gap-1')}>
       <h2 className={cn('text-4xl text-center text-transparent font-medium uppercase bg-clip-text', 'animate-background-shine bg-gradient-FVW')}>Coming Soon</h2>

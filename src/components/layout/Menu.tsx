@@ -1,11 +1,14 @@
-import type { FC } from 'react'
 import { Fragment, useEffect, useState } from 'react'
 import { FiMenu } from 'react-icons/fi'
-import { cn } from '@/utils/styles'
+
 import { NavbarButtons } from '@/components/layout/Navbar'
 import { MenuButton } from '@/components/layout/MenuButtton'
 
-export const Menu: FC = () => {
+import { cn } from '@/utils/styles'
+
+export interface MenuProps {}
+
+export const Menu = ({}: MenuProps) => {
   const [open, setOpen] = useState(false)
 
   useEffect((() => {
