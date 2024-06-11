@@ -1,7 +1,5 @@
 'use client'
 
-import type { FC } from 'react'
-
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { BsMoonStars } from 'react-icons/bs'
@@ -9,7 +7,9 @@ import { IoPartlySunnyOutline } from 'react-icons/io5'
 
 import { cn } from '@/utils/styles'
 
-export const ThemeSwitch: FC = () => {
+export interface ThemeSwitchProps {}
+
+export const ThemeSwitch = ({}: ThemeSwitchProps) => {
   const [mounted, setMounted] = useState(false)
   const { resolvedTheme, setTheme } = useTheme()
 
