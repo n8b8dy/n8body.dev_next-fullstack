@@ -1,8 +1,8 @@
-import type { ComponentProps, FC } from 'react'
+import type { ComponentPropsWithoutRef } from 'react'
 
-export interface SVGProps extends Omit<ComponentProps<'svg'>, 'viewBox'> {}
+export interface SVGProps extends Omit<ComponentPropsWithoutRef<'svg'>, 'viewBox'> {}
 
-export const JavascriptSVG: FC<SVGProps> = (props) => {
+export const JavascriptSVG = (props: SVGProps) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
       <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"></path>
@@ -14,7 +14,7 @@ export const JavascriptSVG: FC<SVGProps> = (props) => {
   )
 }
 
-export const TypescriptSVG: FC<SVGProps> = (props) => {
+export const TypescriptSVG = (props: SVGProps) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
       <path fill="#fff" d="M22.67 47h99.67v73.67H22.67z"></path>
@@ -26,7 +26,7 @@ export const TypescriptSVG: FC<SVGProps> = (props) => {
   )
 }
 
-export const NodeSVG: FC<SVGProps> = (props) => {
+export const NodeSVG = (props: SVGProps) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
       <path fill="url(#a)"
@@ -58,7 +58,7 @@ export const NodeSVG: FC<SVGProps> = (props) => {
   )
 }
 
-export const ReactSVG: FC<SVGProps> = (props) => {
+export const ReactSVG = (props: SVGProps) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
       <g fill="#61DAFB">
@@ -71,7 +71,7 @@ export const ReactSVG: FC<SVGProps> = (props) => {
   )
 }
 
-export const VueSVG: FC<SVGProps> = (props) => {
+export const VueSVG = (props: SVGProps) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
       <path
@@ -83,7 +83,7 @@ export const VueSVG: FC<SVGProps> = (props) => {
   )
 }
 
-export const TailwindSVG: FC<SVGProps> = (props) => {
+export const TailwindSVG = (props: SVGProps) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
       <path
@@ -94,7 +94,7 @@ export const TailwindSVG: FC<SVGProps> = (props) => {
   )
 }
 
-export const GopherSVG: FC<SVGProps> = (props) => {
+export const GopherSVG = (props: SVGProps) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
       <defs>
@@ -161,7 +161,7 @@ export const GopherSVG: FC<SVGProps> = (props) => {
   )
 }
 
-export const GitSVG: FC<SVGProps> = (props) => {
+export const GitSVG = (props: SVGProps) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
       <path
@@ -172,7 +172,7 @@ export const GitSVG: FC<SVGProps> = (props) => {
   )
 }
 
-export const PostgresSVG: FC<SVGProps> = (props) => {
+export const PostgresSVG = (props: SVGProps) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
       <path
@@ -187,7 +187,7 @@ export const PostgresSVG: FC<SVGProps> = (props) => {
   )
 }
 
-export const PrismaSVG: FC<SVGProps> = (props) => {
+export const PrismaSVG = (props: SVGProps) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
       <path fill="#2d3748"
@@ -196,7 +196,7 @@ export const PrismaSVG: FC<SVGProps> = (props) => {
   )
 }
 
-export const DockerSVG: FC<SVGProps> = (props) => {
+export const DockerSVG = (props: SVGProps) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
       <path fillRule="evenodd" clipRule="evenodd" fill="#3A4D54"
@@ -226,7 +226,7 @@ export const DockerSVG: FC<SVGProps> = (props) => {
   )
 }
 
-export const LinuxSVG: FC<SVGProps> = (props) => {
+export const LinuxSVG = (props: SVGProps) => {
   return (
     <svg viewBox="0 0 128 128" {...props}>
       <radialGradient id="linux-original-a" cx="-992.915" cy="-952.952" r="43.267" gradientTransform="matrix(.7 0 0 .35 782.303 444.575)" gradientUnits="userSpaceOnUse">
@@ -1266,7 +1266,7 @@ export const LinuxSVG: FC<SVGProps> = (props) => {
   )
 }
 
-export const ArchSVG: FC<SVGProps> = (props) => {
+export const ArchSVG = (props: SVGProps) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" {...props}>
       <path
