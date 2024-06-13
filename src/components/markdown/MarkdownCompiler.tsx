@@ -1,5 +1,3 @@
-import type { FC } from 'react'
-
 import Markdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
@@ -7,11 +5,11 @@ import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { cn } from '@/utils/styles'
 import Link from 'next/link'
 
-interface MarkdownCompilerProps {
+export interface MarkdownCompilerProps {
   content: string
 }
 
-export const MarkdownCompiler: FC<MarkdownCompilerProps> = ({ content }) => {
+export const MarkdownCompiler = ({ content }: MarkdownCompilerProps) => {
   return (
     <Markdown
       components={{
