@@ -1,9 +1,9 @@
 'use client'
 
-import type { FC } from 'react'
 import type { Message } from '@prisma/client'
-import type { ServerAction } from '@/types/helpers'
 import type { SubmitHandler } from 'react-hook-form'
+
+import type { ServerAction } from '@/types/helpers'
 
 import { useRef, useState } from 'react'
 import { useForm } from 'react-hook-form'

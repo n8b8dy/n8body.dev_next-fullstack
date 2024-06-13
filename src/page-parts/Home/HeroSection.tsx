@@ -1,12 +1,12 @@
-import type { FC } from 'react'
-
 import { Section } from '@/components/layout/Section'
 import { Heading } from '@/components/typography/Heading'
 import { TechnologyHeading } from '@/page-parts/Home/TechnologyHeading'
 
 import { cn } from '@/utils/styles'
 
-export const HeroSection: FC = () => {
+export interface HeroSectionProps {}
+
+export const HeroSection = ({}: HeroSectionProps) => {
   return (
     <Section className={cn('w-auto')}>
       <Heading tag="h1" className={cn('w-min min-[350px]:w-auto min-[500px]:w-min lg:w-auto')}>

@@ -1,4 +1,3 @@
-import type { FC } from 'react'
 import type { Project } from '@prisma/client'
 
 import { Section } from '@/components/layout/Section'
@@ -11,7 +10,7 @@ export interface ProjectsSectionProps {
   projects: Array<Project>
 }
 
-export const ProjectsSection: FC<ProjectsSectionProps> = ({ projects }) => {
+export const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
   return (
     <Section>
       <Heading tag="h3" href="/projects" terminal>

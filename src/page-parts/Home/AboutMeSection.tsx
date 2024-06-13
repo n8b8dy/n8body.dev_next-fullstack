@@ -1,5 +1,3 @@
-import type { FC } from 'react'
-
 import Link from 'next/link'
 
 import { Section } from '@/components/layout/Section'
@@ -10,7 +8,9 @@ import { Bold } from '@/components/typography/Bold'
 
 import { cn } from '@/utils/styles'
 
-export const AboutMeSection: FC = () => {
+export interface AboutMeSectionProps {}
+
+export const AboutMeSection = ({}: AboutMeSectionProps) => {
   return (
     <Section>
       <Heading tag="h3" terminal>

@@ -1,6 +1,6 @@
 'use client'
 
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentPropsWithRef, ReactNode } from 'react'
 import type { FieldErrors } from 'react-hook-form'
 
 import { forwardRef } from 'react'
@@ -9,7 +9,7 @@ import { IoWarningOutline } from 'react-icons/io5'
 
 import { cn } from '@/utils/styles'
 
-export interface InputProps extends Omit<ComponentProps<'input'>, 'ref'> {
+export interface InputProps extends Omit<ComponentPropsWithRef<'input'>, 'ref'> {
   name: string
   errors: FieldErrors
 

@@ -1,15 +1,14 @@
 'use client'
 
-import type { FC } from 'react'
 import { useEffect, useState } from 'react'
 import { Bold } from '@/components/typography/Bold'
 import { cn } from '@/utils/styles'
 
-interface UserIpTextProps {
+export interface UserIpTextProps {
   endpoint: string
 }
 
-export const UserIpText: FC<UserIpTextProps> = ({ endpoint }) => {
+export const UserIpText = ({ endpoint }: UserIpTextProps) => {
   const [ip, setIp] = useState<string | null>(null)
 
   useEffect(() => {

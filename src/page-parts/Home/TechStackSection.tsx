@@ -1,4 +1,4 @@
-import type { FC, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { Section } from '@/components/layout/Section'
 import { Heading } from '@/components/typography/Heading'
 import { DockerSVG, GitSVG, GopherSVG, JavascriptSVG, LinuxSVG, PostgresSVG, ReactSVG, TailwindSVG, TypescriptSVG } from '@/components/lib/svg'
@@ -16,25 +16,9 @@ const Technologies = [
   { title: 'Linux', icon: <LinuxSVG className={cn('transform scale-[1.1]')}/> },
 ] as const
 
-interface TechnologyCardProps {
-  title: string
-  icon: ReactNode
-}
+export interface TechStackSectionProps {}
 
-const Card: FC<TechnologyCardProps> = ({ icon, title }) => {
-  return (
-    <div className={cn(
-      'w-24 h-20 md:w-28 md:h-24 px-1 pt-2 pb-1.5 md:px-2 md:pt-4 md:pb-3',
-      'flex flex-col items-center justify-center gap-1',
-      'text-sm md:text-lg bg-opacity-50 bg-neutral-200 dark:bg-neutral-900 rounded',
-    )}>
-      {icon}
-      <span>{title}</span>
-    </div>
-  )
-}
-
-export const TechStackSection: FC = () => {
+export const TechStackSection = ({}: TechStackSectionProps) => {
   return (
     <Section>
       <Heading tag="h3" terminal>
@@ -44,5 +28,23 @@ export const TechStackSection: FC = () => {
         {Technologies.map((technology) => <Card key={`tech-${technology.title}`} {...technology}/>)}
       </div>
     </Section>
+  )
+}
+
+interface CardProps {
+  title: string
+  icon: ReactNode
+}
+
+const Card = ({ icon, title }: CardProps) => {
+  return (
+    <div className={cn(
+      'w-24 h-20 md:w-28 md:h-24 px-1 pt-2 pb-1.5 md:px-2 md:pt-4 md:pb-3',
+      'flex flex-col items-center justify-center gap-1',
+      'text-sm md:text-lg bg-opacity-50 bg-neutral-200 dark:bg-neutral-900 rounded',
+    )}>
+      {icon}
+      <span>{title}</span>
+    </div>
   )
 }
