@@ -1,4 +1,4 @@
-import type { ComponentProps, FC, ReactNode } from 'react'
+import type { ComponentPropsWithoutRef } from 'react'
 
 import Link from 'next/link'
 import { createElement } from 'react'
@@ -16,13 +16,13 @@ const HeadingClassnames = {
 
 type TagVariants = keyof typeof HeadingClassnames
 
-export interface HeadingProps extends ComponentProps<TagVariants> {
+export interface HeadingProps extends ComponentPropsWithoutRef<TagVariants> {
   tag: TagVariants
   terminal?: boolean
   href?: string
 }
 
-export const Heading: FC<HeadingProps> = ({ children, tag, terminal = false, className, href, ...props }): ReactNode => {
+export const Heading = ({ children, tag, terminal = false, className, href, ...props }: HeadingProps) => {
   return createElement(tag, {
       className: cn(
         HeadingClassnames[tag],
