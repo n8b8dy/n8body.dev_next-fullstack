@@ -1,13 +1,15 @@
-import type { FC } from 'react'
 import type { Project } from '@prisma/client'
 
 import { memo } from 'react'
 
 import { Heading } from '@/components/typography/Heading'
 import { cn } from '@/utils/styles'
+
 import { ProjectTags, ProjectTechnologies } from '@/constants'
 
-export const ProjectCard: FC<Project> = memo(({ id, slug, title, description, tags, technologies }) => {
+export interface ProjectCard extends Project {}
+
+export const ProjectCard = memo(({ id, slug, title, description, tags, technologies }: Project) => {
   return (
     <div className={cn('px-4 py-3 w-full flex flex-col gap-0.5 bg-opacity-50 bg-neutral-200 dark:bg-neutral-900 rounded')}>
       <Heading tag="h5" href={`/projects/${slug}`}>
