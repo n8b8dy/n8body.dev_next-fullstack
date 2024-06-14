@@ -15,7 +15,7 @@ const rubik = Rubik({ subsets: ['latin-ext', 'cyrillic-ext'] })
 
 export const metadata: Metadata = {
   title: 'n8body.dev',
-  description: 'Personal website of an individual under the nickname n8body',
+  description: 'Personal website of an individual under the nickname n8body.',
 }
 
 export default function RootLayout({ children }: Readonly<PropsWithChildren>) {

@@ -35,7 +35,7 @@ export const Heading = ({ children, tag, terminal = false, className, href, ...p
       ...props,
     },href === undefined ? children : <Link href={href} className={cn('inline-flex items-center gap-2 active:underline hover:underline rounded')}>
       {children}
-      <FaLink className={cn('relative top=[1px] text-base opacity-50')}/>
+      <FaLink className={cn('relative text-base opacity-50')}/>
     </Link>,
   )
 }

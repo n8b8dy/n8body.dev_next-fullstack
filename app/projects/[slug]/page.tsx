@@ -43,7 +43,7 @@ export default async function ProjectsSlug({ params }: {
         { content: title },
       ]}/>
 
-      <div className={cn('my-2 flex items-center flex-wrap gap-x-2')}>
+      <div className={cn('mt-1 mb-2 flex items-center flex-wrap gap-x-2')}>
         <Heading tag="h2" className={cn('text-3xl sm:text-3xl md:text-3xl font-medium')} terminal>{title}</Heading>
         {tags.map(tag => <div key={`${id}-${tag}`} className={cn('mt-1 px-3 py-1 text-sm bg-neutral-200 dark:bg-neutral-800 rounded-full')}>
           {ProjectTags[tag]}
