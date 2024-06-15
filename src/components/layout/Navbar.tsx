@@ -1,5 +1,3 @@
-'use client'
-
 import type { NavbarButtonProps } from '@/components/layout/NavbarButton'
 
 import Link from 'next/link'

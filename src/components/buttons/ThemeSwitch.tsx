@@ -18,14 +18,15 @@ export const ThemeSwitch = ({}: ThemeSwitchProps) => {
   }, [])
 
   if (!mounted) return (
-    <div className={cn('w-9 h-9 rounded', 'bg-placeholder')}></div>
+    <div className={cn('w-11 h-11 rounded', 'bg-placeholder')}></div>
   )
 
   return (
     <button onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')} className={cn(
-      'p-2 rounded text-xl transition bg-action-button',
+      'w-11 h-11 flex justify-center items-center rounded text-xl transition',
+      'bg-action-button',
     )}>
-      {resolvedTheme === 'dark' ? <BsMoonStars/> : <IoPartlySunnyOutline/>}
+      {resolvedTheme === 'dark' ? <BsMoonStars className={cn('overflow-visible')}/> : <IoPartlySunnyOutline/>}
     </button>
   )
 }

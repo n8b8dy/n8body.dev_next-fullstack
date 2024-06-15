@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/utils/styles'
@@ -12,7 +14,8 @@ export const NavbarButton = ({ href, text }: NavbarButtonProps) => {
 
   return (
     <Link href={href} className={cn(
-      'px-3 py-2 flex items-center gap-1 rounded text-lg transition bg-action-button',
+      'px-3 py-2 flex items-center rounded text-lg transition',
+      'bg-action-button',
     )}>
       <span
         className={cn(
