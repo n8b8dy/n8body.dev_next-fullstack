@@ -1,1 +1,0 @@
-export type ServerAction<T, R> = ((data: T) => Promise<R>) & Function

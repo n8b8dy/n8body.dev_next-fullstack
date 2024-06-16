@@ -8,8 +8,6 @@ import { Section } from '@/components/layout/Section'
 import { Form } from '@/page-parts/Contacts/Form'
 import { cn } from '@/utils/styles'
 
-import { createMessage } from '~/contacts/actions'
-
 const Paragraphs = [
   { text: 'Burgas, Bulgaria', icon: <HiOutlineLocationMarker/> },
   { text: 'contact@n8body.dev', icon: <TbMailCode className={cn('relative top-[1px]')}/> },
@@ -31,7 +29,7 @@ export default function Contacts() {
           'mb-4 text-3xl text-transparent font-semibold bg-clip-text',
           'animate-background-shine bg-gradient-FVW',
         )}>Write Me</h2>
-        <Form createMessage={createMessage}/>
+        <Form />
       </div>
 
       <div className={cn('mx-auto lg:mx-0 px-2 pt-4 pb-8 w-full lg:w-auto max-w-md')}>

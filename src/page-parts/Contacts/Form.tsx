@@ -1,12 +1,10 @@
 'use client'
 
-import type { Message } from '@prisma/client'
 import type { SubmitHandler } from 'react-hook-form'
-
-import type { ServerAction } from '@/types/helpers'
 
 import { useRef, useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { valibotResolver } from '@hookform/resolvers/valibot'
 import { HiOutlineUser } from 'react-icons/hi'
 import { MdAlternateEmail } from 'react-icons/md'
 import { VscNewline } from 'react-icons/vsc'
@@ -15,19 +13,13 @@ import { Input } from '@/page-parts/Contacts/Input'
 import { TextArea } from '@/page-parts/Contacts/TextArea'
 
 import { cn } from '@/utils/styles'
-import { emailRegex } from '@/utils/regex'
+import { MessageSchema, messageSchema } from '@/schemas/message'
 
-export type Inputs = {
-  name: string
-  email: string
-  message: string
-}
+import { createMessage } from '@/actions/message'
 
-export interface FormProps {
-  createMessage: ServerAction<Inputs, Message>
-}
+export interface FormProps {}
 
-export const Form = ({ createMessage }: FormProps) => {
+export const Form = ({}: FormProps) => {
   const {
     register,
     handleSubmit,
@@ -36,8 +28,9 @@ export const Form = ({ createMessage }: FormProps) => {
       isDirty,
       errors,
     },
-  } = useForm<Inputs>({
+  } = useForm<MessageSchema>({
     delayError: 1000,
+    resolver: valibotResolver(messageSchema),
     defaultValues: {
       name: '',
       email: '',
@@ -45,33 +38,37 @@ export const Form = ({ createMessage }: FormProps) => {
     },
   })
   const [status, setStatus] = useState<'success' | 'error' | null>(null)
+  const [error, setError] = useState<string | null>()
   const statusTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
-  const submitHandler: SubmitHandler<Inputs> = (data) => createMessage(data)
-    .then(response => {
-      console.info(response)
-      setStatus('success')
+  const submitHandler: SubmitHandler<MessageSchema> = async (data, event) => {
+    event?.preventDefault()
+
+    console.log(data)
+    const response = await createMessage(data)
+    console.log(response)
+
+    if (response.data) {
       reset()
-    })
-    .catch(error => {
-      console.error(error)
+      setStatus('success')
+    } else {
       setStatus('error')
-    })
-    .finally(() => {
-      statusTimeoutRef.current && clearTimeout(statusTimeoutRef.current)
-      statusTimeoutRef.current = setTimeout(() => setStatus(null), 5000)
-    })
+      setError(response.error)
+    }
+
+    statusTimeoutRef.current && clearTimeout(statusTimeoutRef.current)
+    statusTimeoutRef.current = setTimeout(() => {
+      setStatus(null)
+      setError(null)
+    }, 8000)
+  }
 
   return (
     <form onSubmit={handleSubmit(submitHandler)} className={cn('flex flex-col gap-2 text-lg')} noValidate>
       <Input
         type="text"
         placeholder="Elliot Alderson"
-        {...register('name', {
-          required: { value: true, message: 'Name is required' },
-          minLength: { value: 2, message: 'Name should be at least 2 characters' },
-          maxLength: { value: 64, message: 'Name shouldn\'t exceed 64 characters' },
-        })}
+        {...register('name')}
         errors={errors}
         icon={<HiOutlineUser className={cn('absolute top-[15px] left-2.5 text-2xl')}/>}
         label="Name *"
@@ -79,11 +76,7 @@ export const Form = ({ createMessage }: FormProps) => {
       <Input
         type="email"
         placeholder="example@n8body.dev"
-        {...register('email', {
-          required: 'Email is required',
-          maxLength: { value: 128, message: 'Email shouldn\'t exceed 128 characters' },
-          pattern: { value: emailRegex, message: 'Email should look like: username@domain.com' },
-        })}
+        {...register('email')}
         errors={errors}
         icon={<MdAlternateEmail className={cn('absolute top-[15px] left-2.5 text-2xl')}/>}
         label="Email *"
@@ -91,11 +84,7 @@ export const Form = ({ createMessage }: FormProps) => {
       <TextArea
         rows={6}
         placeholder="In real open source, you have the right to control your own destiny. &copy; Linus Torvalds"
-        {...register('message', {
-          required: 'Message is required',
-          minLength: { value: 8, message: 'Message should be at least 8 characters' },
-          maxLength: { value: 512, message: 'Message shouldn\'t exceed 512 characters' },
-        })}
+        {...register('message')}
         errors={errors}
         label="Message *"
       />
@@ -107,7 +96,7 @@ export const Form = ({ createMessage }: FormProps) => {
           status === 'error' && 'text-red-600',
         )}>
           {!isDirty && status === 'success' && <span>Message sent successfully!</span>}
-          {status === 'error' && <span>Couldn&apos;t send your message, try later!</span>}
+          {status === 'error' && <span>{error || 'Couldn\'t send your message, try later!'}</span>}
         </div>
 
         <div className={cn('flex gap-2')}>
