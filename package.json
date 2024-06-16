@@ -31,6 +31,7 @@
     "react-markdown": "^9.0.1",
     "react-syntax-highlighter": "^15.5.0",
     "react-type-animation": "^3.2.0",
+    "sharp": "^0.33.4",
     "tailwind-merge": "^2.3.0",
     "valibot": "^0.32.0"
   },
