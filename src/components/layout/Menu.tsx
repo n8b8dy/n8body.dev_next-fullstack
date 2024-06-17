@@ -25,7 +25,7 @@ export const Menu = ({}: MenuProps) => {
   return (
     <Fragment>
       <button onClick={() => setOpen(b => !b)} className={cn(
-        'sm:hidden p-1.5 rounded text-2xl transition bg-action-button',
+        'md:hidden p-1.5 rounded text-2xl transition bg-action-button',
       )}>
         <FiMenu/>
       </button>
@@ -33,7 +33,7 @@ export const Menu = ({}: MenuProps) => {
       <div onClick={() => setOpen(false)} className={cn(
         'fixed top-0 left-0 w-screen h-screen sm:hidden flex backdrop-blur z-10',
         !open && 'hidden',
-      )}></div>
+      )}/>
 
       <nav className={cn(
         'fixed left-0 -bottom-full w-screen px-4 py-6 hidden border-t-[1px] rounded-t-xl z-10 transition-position',

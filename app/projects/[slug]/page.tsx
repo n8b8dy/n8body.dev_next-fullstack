@@ -1,6 +1,6 @@
 import { Section } from '@/components/layout/Section'
 import { Heading } from '@/components/typography/Heading'
-import { BreadCrumbs } from '@/components/layout/BreadCrumbs'
+import { BreadCrumbs } from '@/components/common/BreadCrumbs'
 
 import prisma from '@/lib/prisma'
 import { cn } from '@/utils/styles'
