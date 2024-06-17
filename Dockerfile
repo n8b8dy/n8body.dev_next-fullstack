@@ -1,10 +1,9 @@
-FROM node:18-alpine AS base
+FROM node:20-alpine AS base
 
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 
 RUN corepack enable
-
 
 FROM base AS deps
 
@@ -15,11 +14,10 @@ WORKDIR /app
 
 COPY package.json pnpm-lock.yaml* ./
 RUN pnpm i --frozen-lockfile
-RUN pnpm prisma generate
 
-# Rebuild the source code only when needed
 FROM base AS builder
 WORKDIR /app
+
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
@@ -51,6 +49,6 @@ USER nextjs
 EXPOSE 3000
 
 ENV PORT 3000
-ENV HOSTNAME "localhost"
+ENV HOSTNAME "0.0.0.0"
 
 CMD ["node", "server.js"]
