@@ -11,7 +11,6 @@
     "migrate": "prisma migrate deploy",
     "start:migrate": "pnpm prisma migrate deploy && pnpm start"
   },
-  "packageManager": "pnpm@9.1.1",
   "keywords": [],
   "author": "n8body",
   "license": "MIT",
