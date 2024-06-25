@@ -3,6 +3,8 @@
 
 node_modules
 
+.next
+
 Dockerfile*
 docker-compose*
 .dockerignore

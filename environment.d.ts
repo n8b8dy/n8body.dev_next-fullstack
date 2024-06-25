@@ -3,7 +3,7 @@ namespace NodeJS {
     DATABASE_URL: string
 
     NEXT_AUTH_URL: string
-    NEXTAUTH_SECRET: string
+    NEXT_AUTH_SECRET: string
     GITHUB_APP_CLIENT_ID: string
     GITHUB_APP_CLIENT_SECRET: string
 
