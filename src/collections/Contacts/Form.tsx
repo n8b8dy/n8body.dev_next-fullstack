@@ -9,8 +9,8 @@ import { HiOutlineUser } from 'react-icons/hi'
 import { MdAlternateEmail } from 'react-icons/md'
 import { VscNewline } from 'react-icons/vsc'
 
-import { Input } from '@/page-parts/Contacts/Input'
-import { TextArea } from '@/page-parts/Contacts/TextArea'
+import { Input } from '@/collections/Contacts/Input'
+import { TextArea } from '@/collections/Contacts/TextArea'
 
 import { cn } from '@/utils/styles'
 import { MessageSchema, messageSchema } from '@/schemas/message'

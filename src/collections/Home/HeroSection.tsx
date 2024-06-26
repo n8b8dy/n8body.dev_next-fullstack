@@ -1,6 +1,6 @@
 import { Section } from '@/components/layout/Section'
 import { Heading } from '@/components/typography/Heading'
-import { TechnologyHeading } from '@/page-parts/Home/TechnologyHeading'
+import { TechnologyHeading } from '@/collections/Home/TechnologyHeading'
 
 import { cn } from '@/utils/styles'
 

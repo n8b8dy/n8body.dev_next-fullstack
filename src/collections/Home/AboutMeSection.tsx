@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { Section } from '@/components/layout/Section'
 import { Heading } from '@/components/typography/Heading'
 import { Paragraph } from '@/components/typography/Paragraph'
-import { UserIpText } from '@/page-parts/Home/UserIpText'
 import { Bold } from '@/components/typography/Bold'
+import { UserIpText } from '@/collections/Home/UserIpText'
 
 import { cn } from '@/utils/styles'
 

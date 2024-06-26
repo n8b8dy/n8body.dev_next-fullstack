@@ -5,7 +5,7 @@ import { FaDiscord, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { BiLogoTelegram } from 'react-icons/bi'
 
 import { Section } from '@/components/layout/Section'
-import { Form } from '@/page-parts/Contacts/Form'
+import { Form } from '@/collections/Contacts/Form'
 import { cn } from '@/utils/styles'
 
 const Paragraphs = [
